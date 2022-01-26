@@ -1,7 +1,10 @@
 import { useEffect } from "react";
 
+interface IDocumentTitle {
+  (title: string): void;
+}
 
-const useDocumentTitle = (title: string) => {
+const useDocumentTitle: IDocumentTitle = (title: string) => {
   useEffect(() => {
     document.title = title;
   }, [title]);

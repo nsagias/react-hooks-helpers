@@ -1,13 +1,10 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import useDocumentTitle from "../hooks/useDocumentTitle";
 
 const Title = () => {
-  const PAGE_NAME_DEFAULT = "Landing PAGE";
-  const [title, setTitle] = useState(PAGE_NAME_DEFAULT);
+  const PAGE_NAME_DEFAULT: string = "Landing PAGE";
+  const [title, setTitle] = useState<string>(PAGE_NAME_DEFAULT);
 
-  // useEffect(() => {
-  //   document.title = title;
-  // }, [title]);
   useDocumentTitle(title);
 
   return (
