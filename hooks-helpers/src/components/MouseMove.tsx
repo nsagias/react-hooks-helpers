@@ -17,12 +17,16 @@ const MouseMove = () => {
       });
     };
     document.addEventListener<"mousemove">("mousemove", mouseMoveHandler);
+    // clean up after use
+    return () => {
+      document.removeEventListener<"mousemove">("mousemove", mouseMoveHandler)
+    };
   }, []);
 
   return (
     <div>
       <h2>useMousePosition</h2>
-      <h2>x: 0, y: 0</h2>
+      <h2>{mousePosition.x} {mousePosition.y}</h2>
     </div>
   )
 };
