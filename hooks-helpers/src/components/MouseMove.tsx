@@ -1,10 +1,22 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+
+interface IMousePosition {
+  x: number;
+  y: number;
+}
 
 const MouseMove = () => {
+  const MOUSE_START_DEFAULT: IMousePosition = {x: 0, y: 0};
+  const [mousePosition, setMousePosition] = useState<IMousePosition>(MOUSE_START_DEFAULT);
 
   useEffect(() => {
-    const mouseMoveHander = () => {};
-    document.addEventListener('mousemove', mouseMoveHander);
+    const mouseMoveHandler = (event:any) => {
+      setMousePosition({
+        x: event.clientX,
+        y: event.clientY
+      });
+    };
+    document.addEventListener<"mousemove">("mousemove", mouseMoveHandler);
   }, []);
 
   return (
