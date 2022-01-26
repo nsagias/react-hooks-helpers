@@ -1,9 +1,11 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const Title = () => {
+  const PAGE_NAME_DEFAULT = "Landing PAGE";
+  const [title, setTitle] = useState(PAGE_NAME_DEFAULT);
 
   useEffect(() => {
-    document.title = "Hello Nick"
+    document.title = title;
   });
 
   return (
