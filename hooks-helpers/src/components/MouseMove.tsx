@@ -26,7 +26,7 @@ const MouseMove = () => {
   return (
     <div>
       <h2>useMousePosition</h2>
-      <h2>{mousePosition.x} {mousePosition.y}</h2>
+      <h2>X: {mousePosition.x}  Y:{mousePosition.y}</h2>
     </div>
   )
 };
