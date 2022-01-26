@@ -11,8 +11,9 @@ const Title = () => {
   return (
     <div>
       <h2>useDocumentTitle</h2>
-      <label>Type a new title</label>
-      <input 
+      <label>Type a new title: </label> 
+      <br />
+      <input className="title-input"
         value={title}
         onChange={(event) => setTitle(event.target.value)}
       />

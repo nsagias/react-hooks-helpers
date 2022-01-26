@@ -14,3 +14,10 @@
   color: rgb(15, 121, 167);
 }
 
+.title-input {
+  background-color: #282c34;
+  color: rgb(15, 121, 167);
+  font-size: 17px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
