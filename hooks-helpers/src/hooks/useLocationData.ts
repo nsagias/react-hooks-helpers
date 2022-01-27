@@ -7,9 +7,19 @@ interface ICoordinates {
 
 
 const useLocationData = () => {
-  const COODINATES: ICoordinates = { lat: 0, lon: 0};
+  const COODINATES: ICoordinates = { lat: 0, lon: 0 };
   const [coordinates, setCoordinates] = useState(COODINATES);
-  useEffect(() => {});
+  useEffect(() => {
+    navigator.geolocation.getCurrentPosition((data) => {
+      setCoordinates({
+        lat: data.coords.latitude,
+        lon: data.coords.longitude
+      });
+    });
+  }, []);
+   
+  // already and object
+  return coordinates;
 
 }
 export default useLocationData;
