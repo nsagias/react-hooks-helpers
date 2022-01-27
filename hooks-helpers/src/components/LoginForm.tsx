@@ -22,6 +22,8 @@ const LoginForm = () => {
     alert(`Submiting ${userName.value} and ${password.value}`);
     userName.clearSetValue(USERNAME_DEFAULT);
     password.clearSetValue(PASSWORD_DEFAULT);
+
+    // axios post would go here
   };
 
   return (
@@ -30,18 +32,18 @@ const LoginForm = () => {
       <form onSubmit={handleSubmit}>
         <label>User Name:</label>
         <input 
-          // value={userName.value}
           // onChange={(event) => setUserName(event.target.value)}
-          // onChange={userName.onChange}
-          { ...userName }
+          value={userName.value}
+          onChange={userName.onChange}
+          // { ...userName }
         />
         <br />
         <label>Password:</label>
         <input 
-          // value={password.value}
           // onChange={(event) => SetPassword(event.target.value)}
-          // onChange={password.onChange}
-          { ...password}
+          value={password.value}
+          onChange={password.onChange}
+          // { ...password}
           />
         <br />
         <button type="submit">Login</button>
