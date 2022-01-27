@@ -1,11 +1,12 @@
 import './App.css';
-import MouseMove from './components/MouseMove';
-import Title from './components/Title';
+import LoginForm from './components/LoginForm';
+// import MouseMove from './components/MouseMove';
+// import Title from './components/Title';
 
 function App() {
   return (
     <div className="App">
-      <MouseMove />
+      <LoginForm />
     </div>
   );
 }
