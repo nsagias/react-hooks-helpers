@@ -18,8 +18,10 @@ const LoginForm = () => {
   const handleSubmit: IHandleSubmit = (event:any) => {
     // setUserName(USERNAME_DEFAULT);
     // SetPassword(PASSWORD_DEFAULT);
-    alert(`Submiting ${userName.value} and ${password.value}`);
     event.preventDefault();
+    alert(`Submiting ${userName.value} and ${password.value}`);
+    userName.clearSetValue(USERNAME_DEFAULT);
+    password.clearSetValue(PASSWORD_DEFAULT);
   };
 
   return (

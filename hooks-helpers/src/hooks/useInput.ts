@@ -17,7 +17,7 @@ const useInput = (initialvalue: any) => {
   };
 
   const clearSetValue: IClearSetValue = (valueDefault: any) => {
-    setValue(valueDefault)
+    setValue(valueDefault);
   };
 
   return { 
