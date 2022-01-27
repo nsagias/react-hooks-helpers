@@ -2,7 +2,7 @@ import { useEffect, useState} from "react";
 import axios from "axios";
 
 interface IUseRequestState {
-  data: null;
+  data: null | [];
   loading: boolean;
   errorMsg: string;
 }
