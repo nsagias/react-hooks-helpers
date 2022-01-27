@@ -1,9 +1,21 @@
 import { useState } from "react";
 
-const useInput = (initialvalue: string) => {
+interface IOnChange {
+  (event:any): void;
+}
+
+
+const useInput = (initialvalue: any) => {
   const [value, setValue] = useState(initialvalue);
 
-  return { value }
+  const onChange: IOnChange = (event:any) => {
+    setValue(event.target.value);
+  }
+
+  return { 
+    value, 
+    onChange 
+  };
 };
 
 export default useInput;
