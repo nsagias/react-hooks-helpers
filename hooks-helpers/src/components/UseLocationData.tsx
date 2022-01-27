@@ -1,9 +1,12 @@
-const UseLocationData = () => {
+import useLocationData from "../hooks/useLocationData";
+
+const LocationData = () => {
+  useLocationData
   return (
     <div>
-      <h1>UseLocationData</h1>
+      <h1>useLocationData</h1>
     </div>
   );
 };
 
-export default UseLocationData;
+export default LocationData;
