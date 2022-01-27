@@ -1,5 +1,5 @@
 import './App.css';
-import UseLocationData from './components/UseLocationData';
+import LocationData from './components/LocationData';
 // import LoginForm from './components/LoginForm';
 // import MouseMove from './components/MouseMove';
 // import Title from './components/Title';
@@ -7,7 +7,7 @@ import UseLocationData from './components/UseLocationData';
 function App() {
   return (
     <div className="App">
-      <UseLocationData />
+      <LocationData />
     </div>
   );
 }
