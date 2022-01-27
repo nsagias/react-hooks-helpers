@@ -1,8 +1,18 @@
 import { useEffect, useState} from "react";
 
-const useRequest = () => {
-  const X = ""; 
-  const [x, setX] = useState();
+interface IUseRequestState {
+  data: null;
+  loading: boolean;
+  errorMsg: string;
+}
+
+const useRequest = (url: string) => {
+  const STATE_DEFAULT: IUseRequestState = {
+    data: null,
+    loading: true,
+    errorMsg: ""
+  }; 
+  const [state, setState] = useState(STATE_DEFAULT);
   useEffect( () => {}, []); 
 
 }
