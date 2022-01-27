@@ -14,8 +14,10 @@ const LoginForm = () => {
 
 
   const handleSubmit: IHandleSubmit = (event:any) => {
-    event.preventDefault();
+    setUserName(USERNAME_DEFAULT);
+    SetPassword(PASSWORD_DEFAULT);
     alert(`Submiting ${userName} and ${password}`);
+    event.preventDefault();
   };
 
   return (
