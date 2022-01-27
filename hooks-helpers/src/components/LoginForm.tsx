@@ -1,16 +1,18 @@
 import { useState } from "react";
 
-
+interface IHandleSubmit {
+  (event:any): void;
+}
 
 const LoginForm = () => {
-  const USERNAME_DEFAULT = "";
-  const PASSWORD_DEFAULT = "";
+  const USERNAME_DEFAULT: string = "" ;
+  const PASSWORD_DEFAULT: string = "";
 
-  const [userName, setUserName] = useState(USERNAME_DEFAULT);
-  const [password, SetPassword] = useState(PASSWORD_DEFAULT);
+  const [userName, setUserName] = useState<string>(USERNAME_DEFAULT);
+  const [password, SetPassword] = useState<string>(PASSWORD_DEFAULT);
 
 
-  const handleSubmit = (event:any) => {
+  const handleSubmit: IHandleSubmit = (event:any) => {
     event.preventDefault()
   };
 
