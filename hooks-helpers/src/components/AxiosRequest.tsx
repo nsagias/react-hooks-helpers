@@ -1,7 +1,11 @@
 import useRequest from "../hooks/useRequest";
 
-const AxiosRequest = () => {
-  const url = "http://www.g";
+interface IAxiosRequest {
+  (): void;
+}
+
+const AxiosRequest: IAxiosRequest = () => {
+  const url: string = "http://www.g";
   const {data, loading, errorMsg } = useRequest(url);
 
   return (
