@@ -1,4 +1,5 @@
 import { useEffect, useState} from "react";
+import axios from "axios";
 
 interface IUseRequestState {
   data: null;
@@ -13,7 +14,28 @@ const useRequest = (url: string) => {
     errorMsg: ""
   }; 
   const [state, setState] = useState(STATE_DEFAULT);
-  useEffect( () => {}, []); 
+  useEffect( () => {
+    axios.get(url)
+      .then(result => {
+        setState({
+          data: result.data,
+          loading: false,
+          errorMsg: ""
+        });
+      })
+      .catch(err => {
+        console.log(err);
+
+        setState((prev) => ({
+          ...prev,
+          loading: false,
+          errorMsg: "Error Loading data"
+        }));
+      });
+  }, [url]); 
+  
+  // state is already and object
+  return state;
 
 }
 
