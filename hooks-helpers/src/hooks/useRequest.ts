@@ -13,7 +13,7 @@ const useRequest = (url: string) => {
     loading: true,
     errorMsg: ""
   }; 
-  const [state, setState] = useState(STATE_DEFAULT);
+  const [state, setState] = useState<IUseRequestState>(STATE_DEFAULT);
   useEffect( () => {
     axios.get(url)
       .then(result => {
