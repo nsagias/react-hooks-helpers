@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 interface IOnChange {
-  (event:any): void;
+  (event: React.ChangeEvent): void;
 }
 
 interface IClearSetValue {
