@@ -1,7 +1,7 @@
 import { useState } from "react";
 import useDocumentTitle from "../hooks/useDocumentTitle";
 
-const Title = () => {
+const Title: React.FC = () => {
   const PAGE_NAME_DEFAULT: string = "Landing PAGE";
   const [title, setTitle] = useState<string>(PAGE_NAME_DEFAULT);
 
