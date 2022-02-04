@@ -4,7 +4,8 @@ interface IAxiosRequest {
   (): void;
 }
 
-const AxiosRequest: IAxiosRequest = () => {
+// const AxiosRequest: IAxiosRequest = () => {
+const AxiosRequest: React.FC<IAxiosRequest> = () => {
   const url: string = "http://www.g";
   const {data, loading, errorMsg } = useRequest(url);
 

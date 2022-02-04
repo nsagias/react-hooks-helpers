@@ -1,6 +1,6 @@
 import useLocationData from "../hooks/useLocationData";
 
-const LocationData = () => {
+const LocationData: React.FC = () => {
   const {lat, lon} = useLocationData();
   return (
     <div>

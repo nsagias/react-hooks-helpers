@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import useMouseMove from "../hooks/useMouseMove";
 
-const MouseMove = () => {
+const MouseMove: React.FC = () => {
   const { mousePosition } = useMouseMove();
 
 

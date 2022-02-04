@@ -6,7 +6,7 @@ interface IHandleSubmit {
   (event: React.FormEvent): void;
 }
 
-const LoginForm = () => {
+const LoginForm: React.FC = () => {
   const USERNAME_DEFAULT: string = "";
   const PASSWORD_DEFAULT: string = "";
 
