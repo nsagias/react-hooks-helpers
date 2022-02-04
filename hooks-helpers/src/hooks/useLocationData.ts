@@ -8,7 +8,7 @@ interface ICoordinates {
 
 const useLocationData = () => {
   const COODINATES: ICoordinates = { lat: 0, lon: 0 };
-  const [coordinates, setCoordinates] = useState(COODINATES);
+  const [coordinates, setCoordinates] = useState(<ICoordinates>COODINATES);
   useEffect(() => {
     navigator.geolocation.getCurrentPosition((data) => {
       setCoordinates({
