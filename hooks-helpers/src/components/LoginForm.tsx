@@ -1,8 +1,9 @@
 // import { useState } from "react";
+import React from "react";
 import useInput from "../hooks/useInput";
 
 interface IHandleSubmit {
-  (event:any): void;
+  (event: React.FormEvent): void;
 }
 
 const LoginForm = () => {
@@ -15,7 +16,7 @@ const LoginForm = () => {
   const password = useInput(PASSWORD_DEFAULT);
 
 
-  const handleSubmit: IHandleSubmit = (event:any) => {
+  const handleSubmit: IHandleSubmit = (event: React.FormEvent) => {
     // setUserName(USERNAME_DEFAULT);
     // SetPassword(PASSWORD_DEFAULT);
     event.preventDefault();
