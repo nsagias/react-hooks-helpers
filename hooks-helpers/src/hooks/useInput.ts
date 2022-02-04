@@ -1,7 +1,12 @@
-import { useState } from "react";
+import React, { useState } from "react";
+
+
+interface IOnChangeTarget  {
+  target: HTMLInputElement;
+}
 
 interface IOnChange {
-  (event: React.ChangeEvent): void;
+  (event: IOnChangeTarget): void;
 }
 
 interface IClearSetValue {
@@ -12,7 +17,7 @@ interface IClearSetValue {
 const useInput = (initialvalue: any) => {
   const [value, setValue] = useState(initialvalue);
 
-  const onChange: IOnChange = (event:any) => {
+  const onChange: IOnChange = (event: IOnChangeTarget) => {
     setValue(event.target.value);
   };
 
